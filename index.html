@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light — AI трейдинг без комиссий</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="animated-bg"></div>
+    <canvas id="matrix-canvas"></canvas>
+    <header class="header">
+        <div class="header__logo" style="margin-top: 24px;">
+            <span id="consoleTitle"></span><span id="consoleCursor">_</span>
+        </div>
+        <div class="header__burger" id="burgerMenu" tabindex="0" aria-label="Открыть меню" role="button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="header__nav" id="mainNav">
+            <a href="#benefits">Преимущества</a>
+            <a href="#bonus">Бонус</a>
+            <a href="#reviews">Отзывы</a>
+            <a href="#cta">Начать</a>
+        </nav>
+    </header>
+    <section class="marketcap" id="marketcap">
+        <h2>Рыночная капитализация</h2>
+        <div class="marketcap__rates squares">
+            <div class="marketcap__item square animated">
+                <span class="marketcap__label">USD</span>
+                <span class="marketcap__value" id="usdRate">77,89 ₽</span>
+            </div>
+            <div class="marketcap__item square animated">
+                <span class="marketcap__label">RUB</span>
+                <span class="marketcap__value" id="rubRate">0,01 $</span>
+            </div>
+        </div>
+    </section>
+    <section class="hero">
+        <h1>Биржа с AI-инструментами для трейдинга</h1>
+        <p class="hero__subtitle">0% комиссия на ввод и вывод • Без KYC для большинства стран • $100 бонус на депозит</p>
+        <a href="#cta" class="hero__btn">Начать торговать</a>
+    </section>
+    <section class="benefits" id="benefits">
+        <div class="benefit" data-detail="Депозиты и вывод средств без комиссии. Используйте любые удобные способы оплаты: банковские карты, криптовалюты, электронные кошельки. Все операции защищены и проходят мгновенно. Вы не платите скрытых комиссий, а поддержка работает 24/7." data-sticker="💸">
+            <div class="benefit__icon"><span class="icon-money"></span></div>
+            <h2>0% Комиссия</h2>
+            <p>Без дополнительных сборов</p>
+        </div>
+        <div class="benefit" data-detail="Для большинства стран не требуется верификация личности. Торгуйте анонимно и безопасно, ваши данные не передаются третьим лицам. Ваша конфиденциальность — наш приоритет. В любой момент вы можете пройти KYC для расширения лимитов." data-sticker="🛡️">
+            <div class="benefit__icon"><span class="icon-shield"></span></div>
+            <h2>Без KYC</h2>
+            <p>Анонимная торговля</p>
+        </div>
+        <div class="benefit" data-detail="Искусственный интеллект помогает анализировать рынок, прогнозировать движения цен и совершать сделки автоматически. Используйте автотрейдинг, сигналы и аналитику для максимальной эффективности. Поддержка новых инструментов и регулярные обновления." data-sticker="🤖">
+            <div class="benefit__icon"><span class="icon-ai"></span></div>
+            <h2>AI-аналитика</h2>
+            <p>Автоматизация и анализ</p>
+        </div>
+        <div class="benefit" data-detail="Более 2 миллионов пользователей из 50 стран уже выбрали Light. Присоединяйтесь к глобальному сообществу трейдеров, участвуйте в конкурсах, делитесь опытом и получайте бонусы за активность. Мы ценим каждого клиента и развиваемся вместе с вами!" data-sticker="🌍">
+            <div class="benefit__icon"><span class="icon-users"></span></div>
+            <h2>2+ млн пользователей</h2>
+            <p>Глобальное сообщество</p>
+        </div>
+        <div class="benefit-flyout-bg" id="flyoutBg"></div>
+    </section>
+    <section class="benefit-flyout" id="benefitFlyout" style="display:none;">
+        <div class="benefit-flyout__icon" id="flyoutIcon"></div>
+        <div class="benefit-flyout__text" id="flyoutText"></div>
+        <button class="benefit-flyout__close" id="flyoutClose" aria-label="Закрыть">×</button>
+    </section>
+    <section class="bonus" id="bonus">
+        <div class="bonus__content">
+            <h2>$100 Бонус</h2>
+            <p>Получите ваучер на покрытие торговых комиссий и начните с преимуществом</p>
+        </div>
+    </section>
+    <section class="reviews" id="reviews">
+        <h2>Отзывы пользователей</h2>
+        <div class="reviews__list">
+            <div class="review" data-stars="5">
+                <div class="review__author">Carlos</div>
+                <div class="review__stars"></div>
+                <div class="review__text">«Будущее за Light и AI в трейдинге»</div>
+            </div>
+            <div class="review" data-stars="4">
+                <div class="review__author">Alex</div>
+                <div class="review__stars"></div>
+                <div class="review__text">«Высокий уровень сервиса. Оцениваю как профессионал!»</div>
+            </div>
+            <div class="review" data-stars="5">
+                <div class="review__author">Mohammed</div>
+                <div class="review__stars"></div>
+                <div class="review__text">«Образовательные материалы Light реально помогают»</div>
+            </div>
+        </div>
+    </section>
+    <section class="faq" id="faq">
+        <h2>Часто задаваемые вопросы</h2>
+        <div class="faq__list squares">
+            <div class="faq__item square animated">
+                <h3>Как начать торговать?</h3>
+                <p>Зарегистрируйтесь, пополните баланс и выберите актив для торговли. Всё просто и быстро!</p>
+            </div>
+            <div class="faq__item square animated">
+                <h3>Какие комиссии на платформе?</h3>
+                <p>0% на ввод и вывод средств, минимальные комиссии на сделки.</p>
+            </div>
+            <div class="faq__item square animated">
+                <h3>Нужна ли верификация?</h3>
+                <p>Для большинства стран KYC не требуется. Вы можете торговать анонимно.</p>
+            </div>
+            <div class="faq__item square animated">
+                <h3>Как получить бонус?</h3>
+                <p>Сделайте первый депозит и получите ваучер на покрытие торговых комиссий.</p>
+            </div>
+        </div>
+    </section>
+    <section class="cta" id="cta">
+        <h2>Присоединяйтесь к миллионам трейдеров</h2>
+        <a href="#" class="cta__btn" id="openRegModal">Зарегистрироваться</a>
+        <p class="cta__note">Торговля сопряжена с рисками. Ознакомьтесь с условиями и политикой конфиденциальности.</p>
+    </section>
+    <div class="modal" id="regModal">
+        <div class="modal__content">
+            <span class="modal__close" id="closeRegModal">×</span>
+            <h2>Регистрация</h2>
+            <form id="regForm">
+                <input type="text" name="fio" placeholder="ФИО" required>
+                <input type="tel" name="phone" placeholder="Телефон" required>
+                <input type="date" name="date" placeholder="Дата рождения" required>
+                <button type="submit">Отправить</button>
+            </form>
+            <div class="modal__success" id="regSuccess" style="display:none;">Спасибо! Ваша заявка отправлена.</div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer__content">
+            <span>© Light, 2025</span>
+            <span>Нет финансовых советов. Торгуйте ответственно.</span>
+        </div>
+    </footer>
+    <div class="footer-extra-centered">
+        <div class="footer-extra-centered__content">
+            <h3>Light — ваш путь к современному трейдингу</h3>
+            <p>Платформа Light создана для удобства, безопасности и роста ваших финансовых возможностей. Мы ценим каждого пользователя и постоянно совершенствуем сервис.</p>
+            <p>Связаться с поддержкой: support@light.com</p>
+        </div>
+    </div>
+    <div class="page-spacer"></div>
+    <script src="script.js"></script>
+</body>
+</html> 
